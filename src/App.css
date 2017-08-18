@@ -1,3 +1,118 @@
+/*
+  Styles taken directly from https://daily.grand.co:
+
+  https://app.viralsweep.com/assets/css/template/v2.css?v=2.7.5
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700,600,500);
+* {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+
+body {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  background-color: transparent;
+  touch-action: manipulation;
+}
+
+img {
+  border-style: none;
+}
+
+section {
+  padding: 0 2rem;
+}
+
+article {
+  background: #FFF;
+  border-radius: 3px;
+  border: 1px solid #E1E1E1;
+  box-shadow: 2px 10px 20px 0 rgba(0,0,0,0.05);
+  z-index: 1;
+}
+
+section, article {
+  margin: 2rem auto;
+  max-width: 870px;
+}
+
+article header {
+  color: #3192CE;
+  font-size: 1rem;
+  padding: 2rem;
+  border-bottom: 1px solid #E1E1E1;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+li {
+  line-height: 18px;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dt, dd {
+  text-align: center;
+}
+
+dt {
+  font-weight: 900;
+  margin-bottom: .2rem;
+}
+
+dd {
+  margin: 0 0 1rem 0;
+}
+
+
+.repos li {
+  list-style: none;
+  padding: 8px 0;
+}
+
+.repos li a {
+  color: #174460;
+  text-decoration: none;
+}
+
+.repos li a:hover {
+  text-decoration: underline;
+}
+
+.projectDetails {
+  color: #8996A8;
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+
+}
+
 .App {
   text-align: center;
 }
@@ -18,7 +133,74 @@
   font-size: large;
 }
 
+.iconTitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+.iconTitle div {
+  font-weight: 400;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+
+.gitRepoIcon {
+  fill: #3192CE;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+input[type=text],  input[type=number],  input[type=password],  select,  textarea {
+  color: rgba(93,97,133,0.80);
+  border: 1px solid rgba(93,97,133,0.35);
+  -webkit-transition: -webkit-box-shadow .15s ease-in-out, border .15s ease-in-out, border-left .15s ease-in-out, border-right .15s ease-in-out;
+  -moz-transition: -moz-box-shadow .15s ease-in-out, border .15s ease-in-out, border-left .15s ease-in-out, border-right .15s ease-in-out;
+  -o-transition: -o-box-shadow .15s ease-in-out, border .15s ease-in-out, border-left .15s ease-in-out, border-right .15s ease-in-out;
+  -ms-transition: -ms-box-shadow .15s ease-in-out, border .15s ease-in-out, border-left .15s ease-in-out, border-right .15s ease-in-out;
+  transition: box-shadow .15s ease-in-out, border .15s ease-in-out, border-left .15s ease-in-out, border-right .15s ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+ input[type=text]:focus,  input[type=number]:focus,  input[type=password]:focus,  select:focus,  textarea:focus {
+  border: 1px solid rgba(93,97,133,0.35);
+  border-left: 5px solid rgba(93,97,133,0.35);
+  -webkit-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  -moz-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  -o-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  -ms-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  outline: 0;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus,  select:focus,  textarea:focus {
+  border: 1px solid rgba(93,97,133,0.35);
+  border-right: 5px solid rgba(93,97,133,0.35);
+  -webkit-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  -moz-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  -o-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  -ms-box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  box-shadow: inset 0 0 8px rgba(93,97,133,0.20);
+  outline: 0;
 }

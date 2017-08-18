@@ -1,24 +1,41 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import configureStore from './store';
+import { connect } from 'react-redux';
 
-import Container from './components/Container';
-import logo from './logo.svg';
+import SectionHead from './components/SectionHead';
+import RepoList from './containers/RepoList';
+import SearchBar from './containers/SearchBar';
+import SearchHeader from './containers/SearchHeader';
+
+
 import './App.css';
 
-const store = configureStore();
 class App extends Component {
+  toggle(value) {
+    this.setState(function(state, props){
+      return { repoHidden: !this.state.rankingVisible }
+    })
+  }
+
   render() {
+    /*const repobox = (this.state.repoHidden ? <RepoList repos={this.state.repos} /> : null);*/
     return (
-      <Provider store={store}>
-        <div className="App">
-          <Container>
-            <p> This is your root component </p>
-          </Container>
-        </div>
-      </Provider>
-    );
+        <section className="gitSearch">
+          <SectionHead />
+          <article>
+            <SearchHeader />
+            <SearchBar />
+            <RepoList />
+          </article>
+        </section>
+    )
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+      title: state.title,
+      projectDetails: state.projectDetails
+    }
+}
+
+export default connect(mapStateToProps)(App);
